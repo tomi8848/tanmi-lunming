@@ -8,12 +8,14 @@
 
 ## 下载与安装
 
-请进入本仓库右侧的 **Releases**，展开对应版本的 **Assets**，按设备下载。当前说明对应 **v1.12.2**。
+当前版本为 **v1.12.2**。点击下表直接下载，或进入 [版本发布页](https://github.com/tomi8848/tanmi-lunming/releases/tag/v1.12.2) 查看说明及 SHA-256 校验文件。
 
 | 平台 | 下载文件 | 系统要求 | 使用方式 |
 | --- | --- | --- | --- |
-| Windows | `坛醚论命-1.12.2.exe` | Windows 10 / 11，x64 | 下载后双击运行，无需另外安装 Python 或 Node.js |
-| Android | `坛醚论命-安卓版-1.12.2.apk` | Android 8.0 及以上 | 允许对应下载来源安装应用，再打开 APK 安装 |
+| Windows | [下载电脑版 EXE](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.2/tanmi-lunming-1.12.2-windows-x64.exe) | Windows 10 / 11，x64 | 下载后双击运行，无需另外安装 Python 或 Node.js |
+| Android | [下载安卓版 APK](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.2/tanmi-lunming-1.12.2-android.apk) | Android 8.0 及以上 | 允许对应下载来源安装应用，再打开 APK 安装 |
+
+GitHub 下载附件使用英文文件名，软件内名称仍为“坛醚论命”。
 
 Windows 为便携版，首次启动需要解压运行资源，请稍等。当前 EXE 未做商业代码签名，Windows 可能提示未知发布者；请核对下载来源和文件校验值，不需要关闭系统防护。
 

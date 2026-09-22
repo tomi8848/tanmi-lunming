@@ -8,8 +8,8 @@
 
 | 文件 | 适用设备 |
 | --- | --- |
-| `坛醚论命-1.12.2.exe` | Windows 10 / 11 x64，免安装运行 |
-| `坛醚论命-安卓版-1.12.2.apk` | Android 8.0 及以上 |
+| [tanmi-lunming-1.12.2-windows-x64.exe](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.2/tanmi-lunming-1.12.2-windows-x64.exe) | Windows 10 / 11 x64，免安装运行 |
+| [tanmi-lunming-1.12.2-android.apk](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.2/tanmi-lunming-1.12.2-android.apk) | Android 8.0 及以上 |
 
 普通用户无需下载 GitHub 自动生成的 `Source code` 文件。Windows 无需另外安装 Python 或 Node.js；安卓请保持系统 WebView 更新。
 
@@ -45,8 +45,8 @@ Windows 请退出旧版后运行新 EXE。当前 EXE 未做商业代码签名，
 以下校验值仅对应本次未改动的 v1.12.2 文件。
 
 ```text
-3140D37965B597034AECFA680311E6BE4CA73A39501393D0A65EE794947C3CDD  坛醚论命-1.12.2.exe
-ABB565C1D555357EFD882A86891A88C4E7528343900617BC458AF33C51A61E13  坛醚论命-安卓版-1.12.2.apk
+3140D37965B597034AECFA680311E6BE4CA73A39501393D0A65EE794947C3CDD  tanmi-lunming-1.12.2-windows-x64.exe
+ABB565C1D555357EFD882A86891A88C4E7528343900617BC458AF33C51A61E13  tanmi-lunming-1.12.2-android.apk
 ```
 
 各第三方组件沿用原始许可，声明随软件提供。功能约定、数据说明及开源致谢见仓库 README。本软件用于传统文化学习与娱乐参考，AI 回答需要核对。
