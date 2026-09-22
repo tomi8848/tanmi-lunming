@@ -1,0 +1,61 @@
+坛醚论命 1.12.2 - 来源与适配说明
+
+2026-09-22 发布文案补记：维护者说明“易经杂说-起卦.png”来自南怀瑾《易经杂说》。具体版本、页码及公开再分发授权尚未提供；注明出处不表示取得公开再分发授权。本次仅补充仓库文档，不改变原有安装包、版本或哈希。详见 IMAGE-SOURCE.md。
+
+1.12.2：增加桌面 IPC 主窗口／主框架／本地页面校验、默认拒绝额外权限与子框架，安卓限制页面跳转和桥接页面。Python 升级为官方3.13.15嵌入包（SHA-256见runtime/python/BUILD-INFO.json），移除离线排盘不需要的 _ssl.pyd、_hashlib.pyd、libssl-3.dll、libcrypto-3.dll；SHA-256由Python内置实现提供。AI HTTPS 仍使用Electron／Android原生网络栈。历史OpenSSL许可保留仅为来源追溯。
+
+1.10.0：复用 iztro 独立天地人盘，支持各盘大限与流年；切盘建立独立历史快照，导出与 AI 绑定当前盘式。修正底层库重排后身宫摘要字段与宫内标记不一致；手机竖屏完整显示全部星曜、亮度、四化、流曜及年龄，提供三档字号。详见 ZIWEI-PLATES-RULES.md。
+
+1.9.0：安卓增加适合竖屏的十二宫总览，点选宫位查阅完整星曜及年龄，保留完整大盘；两端优化分模块 AI 提示词、事实依据与追问范围，提供可见的完整提示词及快捷分析重点。排盘算法和原有存档路径不变。
+
+1.8.2：修复安卓版许可页遗漏无扩展名 LICENSE 的问题，保留完整版权和许可文本；补充 @babel/runtime 及内置 Python 使用的 OpenSSL 3.0.16 声明。来源声明随成品离线提供，不依赖开发电脑路径。Windows 的 Electron 与 Chromium 许可另位于运行目录 LICENSE.electron.txt、LICENSES.chromium.html；均随便携包携带。
+
+1.8.1：紫微三方四正取消中宫虚线，仅保留所选宫位与关联宫位的底色高亮。
+1.8：增加可选 DeepSeek、OpenAI 和兼容 API 接口、本机密钥加密、分析存档；未内置服务商模型权重或提供账户权限。服务商 API 名称仅说明接口兼容性，不表示官方授权、合作或背书。
+1.7：增加本机 PNG 导出、安卓系统文件保存与分享。
+
+1.6：六爻增加本卦／之卦爻画对照，标准 6/7/8/9 值、阴阳动静和逐爻原文跳转。补齐逐爻《象》曰、用九／用六象辞及乾坤文言，提供六十四卦检索，原文范围与版本见 ZHOUYI-TEXT-SOURCES.txt。旧存档的卦象不变，阅读库单独补全；桌面和安卓共用实现。
+
+1.5：新增五行明干／藏干分层统计、逐项来源、四柱神煞卡片及查表链条。藏干和十神沿用固定上游表，本中余 6:3:1，双藏归一化为 2:1、单藏为 1，每个地支总份数为 1。归一化为软件显示约定，不作为统一旺衰公式；见 bazi-insights-rules.md。
+
+1.4.1：复核电脑版，并调整手机年份操作区位置、触控尺寸和旧 WebView 间距。手机版在命盘上方操作年份，中宫保留所选年、流年和小限信息；两端运限及星曜计算继续共用同一实现。
+
+1.4：传统紫微盘式由本项目自行实现，参考用户提供图片的布局特征；未引入参考软件的品牌或代码。星曜、原始亮度、四化、流年与小限继续使用本地现有计算结果。三方四正表示所选宫、三合宫及对宫关系，当前版本仅以底色高亮显示。年龄简表按 60 年分段显示，可展开完整年龄表；没有改变运限算法。
+
+紫微斗数算法：Renhuai123/ziwei-doushu (MIT)
+https://github.com/Renhuai123/ziwei-doushu
+固定提交：88194a404242bfe5c6d5cc512e4117e3e245cdd5
+复用 lib/ziwei/algorithm.ts、types.ts、constants.ts、sihua.ts、cities.ts。保留原文件。适配器将校正后的晚子时日期先推进到次日，再以早子时传参，以正确处理农历月、年边界；大限当前年龄改为农历虚岁。
+流年/大限四化沿用上游表；流年宫位与流曜调用 iztro.horoscope。保留生年四化并分层标注。星曜亮度增加底层原始值。
+1.3：本命盘叠加所选农历年的流年命宫与小限位置，列出各宫对应虚岁。流年命宫取当年太岁地支；小限取 iztro 的各宫 ages，按男顺女逆的十二年周期递推，超过 120 虚岁时继续同一周期。小限起宫规则见 https://docs.iztro.com/zh_TW/learn/setup 。改动位于本地适配层与界面，上游文件未修改。
+
+八字算法：jinchenma94/bazi-skill (MIT)
+https://github.com/jinchenma94/bazi-skill
+固定提交：112a5d84cd1a001a0038cafca3be68d93e4c0cc9
+调用未修改的 scripts/pai_pan.py，JSON 桥接在 src/python/bridge.py。
+1.2 桌面适配：农历换算与节气统一使用 lunar-javascript；桥接层替换年月柱和节气起运依据，复用原十神、藏干、大运、神煞函数重新计算。上游源文件未修改。
+1.2 安卓适配：src/mobile/bazi.ts 将上述桌面计算移植到 TypeScript；查表数据由 scripts/generate-mobile-tables.py 提取，包含上游神煞、大运方向和起运折算规则。1718 组样本与桌面 Python 桥接结果对照一致。APK 不包含 Python 运行时。
+神煞查表规则另附 bazi-shensha-table.md；庚干天乙贵人采用上游丑未/寅午并集，羊刃包含阴干表。
+
+底层历法与紫微库：
+iztro - https://github.com/SylarLong/iztro
+lunar-javascript - https://github.com/6tail/lunar-javascript
+时辰、晚子与闰月规则：https://docs.iztro.com/posts/astrolabe
+流年接口：https://docs.iztro.com/posts/horoscope
+太阳时均时差（NOAA 近似公式）：https://gml.noaa.gov/grad/solcalc/solareqns.PDF
+香港天文台农历对照样例：https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2023.pdf
+https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2024.pdf
+
+六爻实现：本地新增，京房八宫、纳甲歌、日干起六神。
+八宫卦序参考（古籍转录）：https://fatetree.cn/yijing-jingfang-najia.html
+所有变爻六亲按本卦卦宫五行确定；缺失六亲从本宫纯卦同爻位取伏神。
+随机铜钱使用 Node crypto.randomInt(2)。时间种子模式使用 UTC ISO 毫秒时间、SHA-256 与18个位，不使用时间取模4的偏置方法；此模式可预测、可复现，非梅花时间法。
+安卓随机铜钱使用 Web Crypto getRandomValues 的独立位；系统时间模式使用 SubtleCrypto SHA-256，与桌面同版本种子映射一致。
+
+原版坛醚起卦_Windows_x64.exe 与 易经杂说-起卦.png 来自用户工作目录，未修改文件。
+原版程序在独立窗口启动。未取得原版程序及说明图片的源码或对外再分发许可证明；本个人构建保留用户已有文件，不把它们纳入上游 MIT 授权范围。对外发布前须取得相应授权或移除这些素材。安卓版不包含原 EXE，但包含说明图片。
+
+桌面界面：React、Lucide；运行环境：Electron、Python 3.13.15。
+安卓界面：共用 React、Lucide，运行于系统 WebView；Java 容器通过本地资源拦截提供离线页面，IndexedDB 保存记录，系统文档选择器负责导出。原 Windows EXE 不包含在 APK 中。
+依赖精确版本由 package-lock.json 固定。第三方许可文件随本文件一并提供。
+排盘仅供传统文化研究与娱乐参考。

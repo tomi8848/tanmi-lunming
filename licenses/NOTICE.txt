@@ -1,0 +1,13 @@
+坛醚论命 — 第三方许可阅读说明
+
+各组件分别适用其原始许可；本目录不能被理解为整套程序、全部素材都采用 MIT 许可，也不表示上游作者为本软件背书。版权和授权全文保留在相应 LICENSE 文件中。
+
+核心排盘与界面依赖：ziwei-doushu、bazi-skill、iztro、lunar-javascript、React、React DOM、scheduler、dayjs、i18next、@babel/runtime、lunar-lite、lunar-typescript；Lucide 图标另含 ISC 与部分 Feather 图标的 MIT 声明。
+
+本目录也保留部分构建工具的许可。存在许可文本不代表每个平台都打包了该组件。Android 使用系统 WebView，不打包 Electron 或 Python。Windows 随包包含 Electron/Chromium、Python；Chromium 及其依赖的汇总声明位于便携程序解压运行目录的 LICENSES.chromium.html。
+
+原版坛醚起卦 EXE 和说明 PNG 是用户提供的现有素材，授权尚未核实；它们不因本程序使用开源组件而自动获得对外分发授权。具体来源、固定上游提交和适配改动见 SOURCES.txt；古籍原文及校订见 ZHOUYI-TEXT-SOURCES.txt。
+
+2026-09-22 出处补记：维护者说明，起卦图片“易经杂说-起卦.png”来自南怀瑾《易经杂说》。版本、页码及公开再分发授权尚未提供；出处标注不改变原有权利状态。详见 IMAGE-SOURCE.md。
+
+1.12.2 使用精简的 Python 3.13.15 嵌入式运行库，不再打包 Python 的 OpenSSL DLL 和绑定；保留历史 OpenSSL 许可不表示当前成品仍包含该组件。离线排盘不使用 Python TLS，AI 网络与证书校验由 Electron／Android 完成。

@@ -1,0 +1,17 @@
+# Repository contains only public-facing documentation and license notices.
+*.exe
+*.apk
+*.zip
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.lnk
+.env*
+keystore-password.txt
+android/signing/
+源码备份*/
+node_modules/
+runtime/
+test-output/

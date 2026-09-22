@@ -1,0 +1,40 @@
+坛醚论命 1.6 — 《周易》古籍原文来源与校订
+
+本版仅摘录公有领域的古典原文，不采用现代译文或命理解读。
+
+卦辞与爻辞：
+https://github.com/Johnson-Jia/liuyao-divination/blob/main/data/zhouyi.json
+上游说明为 public-domain text。使用简体卦辞及六爻原文；移除后加的括号读音/释字。
+
+彖传、大象与逐爻小象（含用九、用六）：
+https://github.com/bollwarm/ZHOUYI/blob/master/lib/ZHOUYI.pm
+固定提交 72a938726765d3c0e99ae9093983f5d6c032067a
+仅摘录 __DATA__ 中古籍原文，未使用其 Perl 程序。保留底本繁体。1.6 补入 384 条小象及用九、用六象辞；提取时逐卦验证六爻标签和阴阳顺序，以免乾卦非相邻编排导致小象错位。
+原仓库声明：Copyright 2016 orange. This library is free software;
+you can redistribute it and/or modify it under the same terms as Perl itself.
+
+校订记录：
+1. 补齐简体转录漏掉的师卦六四：“师左次，无咎。”
+2. 师卦上六“开国成家”校为“开国承家”。
+3. 谦卦误标“六三：呜谦”校为“六二：鸣谦，贞吉。”
+4. 乾、坤分别补足用九、用六，独立于六爻之外展示。
+5. 原文底本“坎上下坤”标题次序在提取时规范为“坎上坤下”。
+核对来源：
+https://zh.wikisource.org/w/index.php?title=周易/師&oldid=2405011
+https://zh.wikisource.org/w/index.php?title=周易/謙&oldid=2106142
+https://zh.wikisource.org/zh-hans/周易/乾
+https://zh.wikisource.org/zh-hans/周易/坤
+
+数据提取脚本 scripts/prepare-classics.cjs 会验证全部 64 卦、384 爻、
+各爻阴阳标签与卦象一致，并验证 384 条小象及 2 条特殊象辞完整；另有用九、用六两条爻辞。
+不同古籍版本用字与句读存在异文，软件按上述底本展示。
+
+乾、坤《文言》全文：
+https://zh.wikisource.org/w/index.php?title=周易/乾&oldid=2404991
+https://zh.wikisource.org/w/index.php?title=周易/坤&oldid=2404999
+固定版本原始转录存于 vendor/zhouyi-text/collation。只提取公有领域古典文本，移除维基排版及字形保护标记，保留底本文字。分别为 28、7 个原文段落。文言未采用 Perl 底本，以避免其中“乾龍也”等转录问题；按维基文库固定版作“潛龍也”。维基文库网站编辑内容按 CC BY-SA 4.0 提供，本软件未采用现代译注。
+
+“全文”指所选一卦的经文、彖传、大象、小象及乾坤文言，不包括跨卦的《系辞》《说卦》等篇章。文本导出一并包含上述原文。旧保存记录打开时按卦名读取完整原文库，不改动旧卦象和动爻数据。
+
+时间条中“敬文王之演易，怀周公之系爻。观象玩辞，以敬以诚。”
+为本软件新写的致敬题语，标作“三式敬题”，不是伪托古籍引文。
