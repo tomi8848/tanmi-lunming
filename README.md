@@ -8,12 +8,12 @@
 
 ## 下载与安装
 
-当前电脑版为 **v1.12.2**，安卓版为 **v1.12.4**。点击下表直接下载，或进入 [版本发布列表](https://github.com/tomi8848/tanmi-lunming/releases) 查看各版本说明和 SHA-256 校验文件。
+当前电脑版为 **v1.12.2**，安卓版为 **v1.12.5**。点击下表直接下载，或进入 [版本发布列表](https://github.com/tomi8848/tanmi-lunming/releases) 查看各版本说明和 SHA-256 校验文件。
 
 | 平台 | 下载文件 | 系统要求 | 使用方式 |
 | --- | --- | --- | --- |
 | Windows | [下载电脑版 EXE](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.2/tanmi-lunming-1.12.2-windows-x64.exe) | Windows 10 / 11，x64 | 下载后双击运行，无需另外安装 Python 或 Node.js |
-| Android | [下载安卓版 APK v1.12.4](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.4/tanmi-lunming-1.12.4-android.apk) | Android 8.0 及以上 | 允许对应下载来源安装应用，再打开 APK 安装；已有 1.12.3 请覆盖安装 |
+| Android | [下载安卓版 APK v1.12.5](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.5/tanmi-lunming-1.12.5-android.apk) | Android 8.0 及以上 | 允许对应下载来源安装应用，再打开 APK 安装；已有 1.12.4 请覆盖安装 |
 
 GitHub 下载附件使用英文文件名，软件内名称仍为“坛醚论命”。
 
@@ -21,7 +21,7 @@ Windows 为便携版，首次启动需要解压运行资源，请稍等。当前
 
 安卓请保持系统 WebView 更新。已有旧版时，使用同一发布者签名的 APK **覆盖安装**，不要先卸载，以保留本机记录。
 
-安卓 1.12.4 在十二宫外圈增加方位，支持海外地区按当地历史时区及夏令时换算北京时间，再校正真太阳时。预设海外城市可搜索，自动填写时区与近似经度；其他地区可手填。此前的竖屏、平板和 AI 设置优化继续保留。电脑版仍为 1.12.2。
+安卓 1.12.5 优化紫微盘星曜布局：主星、辅星与煞曜横向并列，小星集中在右侧，字号随宫格宽度和星曜数量适配；宫名与大限年龄靠底部对齐。手机总览、完整大盘与平板均显示外圈方位，海外时区及真太阳时功能继续保留。电脑版仍为 1.12.2。
 
 GitHub 自动生成的 `Source code (zip)` / `Source code (tar.gz)` 是仓库内容快照，不是安装包。当前不提供 macOS、Linux 或 iOS 安装包。
 
