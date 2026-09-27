@@ -8,18 +8,20 @@
 
 ## 下载与安装
 
-当前版本为 **v1.12.2**。点击下表直接下载，或进入 [版本发布页](https://github.com/tomi8848/tanmi-lunming/releases/tag/v1.12.2) 查看说明及 SHA-256 校验文件。
+当前电脑版为 **v1.12.2**，安卓版为 **v1.12.3**。点击下表直接下载，或进入 [版本发布列表](https://github.com/tomi8848/tanmi-lunming/releases) 查看各版本说明和 SHA-256 校验文件。
 
 | 平台 | 下载文件 | 系统要求 | 使用方式 |
 | --- | --- | --- | --- |
 | Windows | [下载电脑版 EXE](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.2/tanmi-lunming-1.12.2-windows-x64.exe) | Windows 10 / 11，x64 | 下载后双击运行，无需另外安装 Python 或 Node.js |
-| Android | [下载安卓版 APK](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.2/tanmi-lunming-1.12.2-android.apk) | Android 8.0 及以上 | 允许对应下载来源安装应用，再打开 APK 安装 |
+| Android | [下载安卓版 APK v1.12.3](https://github.com/tomi8848/tanmi-lunming/releases/download/v1.12.3/tanmi-lunming-1.12.3-android.apk) | Android 8.0 及以上 | 允许对应下载来源安装应用，再打开 APK 安装；已有 1.12.2 请覆盖安装 |
 
 GitHub 下载附件使用英文文件名，软件内名称仍为“坛醚论命”。
 
 Windows 为便携版，首次启动需要解压运行资源，请稍等。当前 EXE 未做商业代码签名，Windows 可能提示未知发布者；请核对下载来源和文件校验值，不需要关闭系统防护。
 
 安卓请保持系统 WebView 更新。已有旧版时，使用同一发布者签名的 APK **覆盖安装**，不要先卸载，以保留本机记录。
+
+安卓 1.12.3 增加真太阳时出生城市搜索，压缩手机竖屏命盘，在宫位详情查看完整年龄与流曜；平板竖屏命盘无需横向滑动。AI 设置新增分步提示、密钥显隐与当前配置状态。电脑版仍为 1.12.2。
 
 GitHub 自动生成的 `Source code (zip)` / `Source code (tar.gz)` 是仓库内容快照，不是安装包。当前不提供 macOS、Linux 或 iOS 安装包。
 
